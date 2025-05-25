@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.mobile.bce.FormActivity
+import com.mobile.bce.PersonActivity
 import com.mobile.bce.R
 
 class HomeFragment : Fragment() {
@@ -24,10 +25,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnGo = view.findViewById<Button>(R.id.btnRegister)
+        val btnPersonList = view.findViewById<Button>(R.id.btnPersonList)
+
+
         btnGo.setOnClickListener {
             val intent = Intent(requireActivity(), FormActivity::class.java)
             startActivity(intent)
         }
+
+        btnPersonList.setOnClickListener {
+            val intent = Intent(requireActivity(), PersonActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
 
