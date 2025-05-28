@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">BCE7th</string>
-    <string name="hello">Hello World!</string>
-    <string name="first_text">This is my application</string>
-    <string name="second_text">This is subtitle</string>
+    <string name="welcome_home">Welcome to Home!</string>
+        <string name="notification">Notification</string>
+        <string name="dialog">Show Dialog</string>
+        <string name="english">English</string>
+        <string name="nepali">Nepali</string>
+        <string name="notification_title">Notification</string>
+        <string name="notification_message">This is a sample notification.</string>
+        <string name="dialog_title">Dialog Box</string>
+        <string name="dialog_message">This is a sample dialog box.</string>
 
     <string-array name="country">
         <item>--Select Country--</item>
@@ -15,8 +21,6 @@
     <!-- Drawer Toggle -->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

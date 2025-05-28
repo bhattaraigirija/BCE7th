@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">बि सी इ ७ औ </string>
+    <string name="welcome_home">एपमा स्वागत छ!</string>
+    <string name="notification">सूचना</string>
+    <string name="dialog">Dialog देखाउनुहोस्</string>
+    <string name="english">अंग्रेजी</string>
+    <string name="nepali">नेपाली</string>
+    <string name="notification_title">सूचना</string>
+    <string name="notification_message">यो एउटा नमूना सूचना हो।</string>
+    <string name="dialog_title">संवाद बक्स</string>
+    <string name="dialog_message">यो एउटा नमूना संवाद बक्स हो।</string>
+    <!-- Drawer Toggle -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+</resources>
