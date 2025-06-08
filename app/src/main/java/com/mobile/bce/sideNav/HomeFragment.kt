@@ -17,6 +17,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat.getSystemService
 import com.mobile.bce.FormActivity
 import com.mobile.bce.PersonActivity
+import com.mobile.bce.ProductActivity
 import com.mobile.bce.R
 import java.util.Locale
 
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
         val btnDialog = view.findViewById<Button>(R.id.btnDialog)
         val btnEnglish = view.findViewById<Button>(R.id.btnEnglish)
         val btnNepali = view.findViewById<Button>(R.id.btnNepali)
+        val btnProduct = view.findViewById<Button>(R.id.btnProduct)
 
 
 //        btnGo.setOnClickListener {
@@ -63,6 +65,12 @@ class HomeFragment : Fragment() {
         btnNepali.setOnClickListener {
             setLanguage("ne")
         }
+
+        btnProduct.setOnClickListener {
+            val intent = Intent(requireContext(), ProductActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun showDialogBox() {

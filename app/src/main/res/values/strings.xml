@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Hello APP</string>
     <string name="welcome_home">Welcome to Home!</string>
-        <string name="notification">Notification</string>
-        <string name="dialog">Show Dialog</string>
-        <string name="english">English</string>
-        <string name="nepali">Nepali</string>
-        <string name="notification_title">Notification</string>
-        <string name="notification_message">This is a sample notification.</string>
-        <string name="dialog_title">Dialog Box</string>
-        <string name="dialog_message">This is a sample dialog box.</string>
+    <string name="notification">Notification</string>
+    <string name="dialog">Show Dialog</string>
+    <string name="english">English</string>
+    <string name="nepali">Nepali</string>
+    <string name="notification_title">Notification</string>
+    <string name="notification_message">This is a sample notification.</string>
+    <string name="dialog_title">Dialog Box</string>
+    <string name="dialog_message">This is a sample dialog box.</string>
 
     <string-array name="country">
         <item>--Select Country--</item>
