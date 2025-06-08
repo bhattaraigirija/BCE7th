@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.mobile.bce.database.MyDatabaseHelper
 
 class FormActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -25,9 +26,6 @@ class FormActivity : AppCompatActivity() {
 
 
         val btnRegister = findViewById<Button>(R.id.btnSubmit)
-        val txtResultName = findViewById<TextView>(R.id.tvResultName)
-        val txtResultAddress = findViewById<TextView>(R.id.tvResultAddress)
-        val txtResultEmail = findViewById<TextView>(R.id.tvResultEmail)
         val name = findViewById<EditText>(R.id.edtName)
         val address = findViewById<EditText>(R.id.edtAddress)
         val email = findViewById<EditText>(R.id.edtEmail)
@@ -52,7 +50,6 @@ class FormActivity : AppCompatActivity() {
 
         //code to display and pass form data
         btnRegister.setOnClickListener {
-
             val nameData = name.text.toString()
             val addressData = address.text.toString()
             val emailData = email.text.toString()
@@ -61,25 +58,22 @@ class FormActivity : AppCompatActivity() {
             val countryText = country.selectedItem.toString()
             val acceptedTerms = terms.isChecked.toString()
 
+            // Insert data into the database
+            val dbHelper = MyDatabaseHelper(this)
+            dbHelper.insertUserData(
+                name = nameData,
+                address = addressData,
+                email = emailData,
+                gender = genderText,
+                country = countryText,
+                terms = acceptedTerms
+            )
 
-//            txtResultName.setText("Name:  "+ nameData + ", Country: "+countryText)
-//            txtResultAddress.setText("Address:  "+ addressData + ", Gender: "+genderText)
-//            txtResultEmail.setText("Email:  "+ emailData+ ", Terms: "+acceptedTerms)
-
-            val intent = Intent(this, ReasultActivity::class.java).apply {
-                putExtra("name", nameData)
-                putExtra("address", addressData)
-                putExtra("email", emailData)
-                putExtra("gender", genderText)
-                putExtra("country", countryText)
-                putExtra("terms", acceptedTerms)
-            }
-
+            // Redirect to the ResultActivity (no data in Intent)
+            val intent = Intent(this, ReasultActivity::class.java)
             startActivity(intent)
-
-
-
         }
+
 
 
 

@@ -23,10 +23,10 @@
             android:name=".ReasultActivity"
             android:exported="false" />
         <activity
-            android:name=".FormActivity"
+            android:name=".SplashScreen"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".FormActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

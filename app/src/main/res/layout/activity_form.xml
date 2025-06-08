@@ -95,24 +95,6 @@
             android:layout_marginBottom="24dp"
             android:text="Submit"/>
 
-        <TextView
-            android:id="@+id/tvResultName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name:"
-            android:textSize="18sp"/>
-        <TextView
-            android:id="@+id/tvResultAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address:"
-            android:textSize="18sp"/>
-        <TextView
-            android:id="@+id/tvResultEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email:"
-            android:textSize="18sp"/>
 
     </LinearLayout>
 

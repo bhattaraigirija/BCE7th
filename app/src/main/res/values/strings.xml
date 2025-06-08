@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BCE7th</string>
+    <string name="app_name">Hello APP</string>
     <string name="welcome_home">Welcome to Home!</string>
         <string name="notification">Notification</string>
         <string name="dialog">Show Dialog</string>
