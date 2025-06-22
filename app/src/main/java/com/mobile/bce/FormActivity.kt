@@ -72,6 +72,17 @@ class FormActivity : AppCompatActivity() {
             // Redirect to the ResultActivity (no data in Intent)
             val intent = Intent(this, ReasultActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+//            val transaction = supportFragmentManager.beginTransaction()
+//            transaction.setCustomAnimations(
+//                R.anim.slide_in_and_out,     // enter
+//                R.anim.slide_out_and_fade,   // exit
+//                R.anim.slide_in_and_out,     // popEnter
+//                R.anim.slide_out_and_fade    // popExit
+//            )
+//            transaction.replace(R.id.fragment_container, MyFragment())
+//            transaction.addToBackStack(null)
+//            transaction.commit()
         }
 
 
