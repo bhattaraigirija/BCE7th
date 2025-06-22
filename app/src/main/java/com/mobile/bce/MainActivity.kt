@@ -32,6 +32,19 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(context)
     }
 
+    //simple thread function
+    private fun startBackgroundTask() {
+        val thread = Thread {
+            Thread.sleep(7000)
+
+            runOnUiThread {
+
+                Toast.makeText(this, "Task Complete", Toast.LENGTH_SHORT).show()
+            }
+        }
+        thread.start()
+    }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +55,15 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+
+
+        //code to start service
+        val intent = Intent(this, MyService::class.java)
+        startService(intent)
+
+        //function call to run theread
+        startBackgroundTask()
+
 
         setSupportActionBar(toolbar)
 
