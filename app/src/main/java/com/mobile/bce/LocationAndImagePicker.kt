@@ -47,7 +47,7 @@ class LocationAndImagePicker : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_locatoin_and_image_picker)
+        setContentView(R.layout.activity_location_and_image_picker)
 
         imageView = findViewById(R.id.imageView)
         btnPickImage = findViewById(R.id.btnPickImage)
