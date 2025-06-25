@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.core.app.ActivityCompat.recreate
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat.getSystemService
@@ -41,22 +42,18 @@ class HomeFragment : Fragment() {
         val btnEnglish = view.findViewById<Button>(R.id.btnEnglish)
         val btnNepali = view.findViewById<Button>(R.id.btnNepali)
         val btnProduct = view.findViewById<Button>(R.id.btnProduct)
+        val btnForm = view.findViewById<Button>(R.id.btnForm)
 
 
-//        btnGo.setOnClickListener {
-//            val intent = Intent(requireActivity(), FormActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        btnPersonList.setOnClickListener {
-//            val intent = Intent(requireActivity(), PersonActivity::class.java)
-//            startActivity(intent)
-//        }
+        btnForm.setOnClickListener {
+            val intent = Intent(requireActivity(), FormActivity::class.java)
+            startActivity(intent)
+        }
 
 
-//        btnDialog.setOnClickListener {
-//            showDialogBox()
-//        }
+        btnDialog.setOnClickListener {
+            showDialogBox()
+        }
 
         btnEnglish.setOnClickListener {
             setLanguage("en")
@@ -75,10 +72,13 @@ class HomeFragment : Fragment() {
 
     private fun showDialogBox() {
         AlertDialog.Builder(requireContext())
-            .setTitle(getString(R.string.dialog_title))
-            .setMessage(getString(R.string.dialog_message))
-            .setPositiveButton("OK") { dialog, _ ->
+            .setTitle("Exit App")
+            .setMessage("Do you want to exit?")
+            .setPositiveButton("NO") { dialog, _ ->
                 dialog.dismiss()
+            }
+            .setNegativeButton("Yes"){dialog, _ ->
+                activity?.finishAffinity()
             }
             .show()
     }

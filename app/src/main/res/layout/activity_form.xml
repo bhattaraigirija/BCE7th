@@ -35,6 +35,8 @@
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
+            android:height="56dp"
+            android:background="@drawable/edittext_background"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Enter name"/>
@@ -42,6 +44,8 @@
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
+            android:height="56dp"
+            android:background="@drawable/edittext_background"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="Enter email"/>
@@ -50,6 +54,8 @@
             android:id="@+id/edtAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:height="56dp"
+            android:background="@drawable/edittext_background"
             android:layout_marginBottom="10dp"
             android:hint="Enter address"/>
 
@@ -77,6 +83,7 @@
         <Spinner
             android:id="@+id/spCountry"
             android:layout_width="match_parent"
+            android:background="@drawable/edittext_background"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:entries="@array/country"/>
@@ -91,6 +98,8 @@
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
+            android:height="56dp"
+            android:background="@drawable/button_background"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:text="Submit"/>
